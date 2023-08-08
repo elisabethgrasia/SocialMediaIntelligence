@@ -1,0 +1,24 @@
+"0","subgraph
+"
+"1","function (graph, v) 
+"
+"1","{
+"
+"1","    if (!is_igraph(graph)) {
+"
+"1","        stop(""Not a graph object"")
+"
+"1","    }
+"
+"1","    on.exit(.Call(C_R_igraph_finalizer))
+"
+"1","    .Call(C_R_igraph_subgraph, graph, as.igraph.vs(graph, v) - 
+"
+"1","        1)
+"
+"1","}
+"
+"1","<bytecode: 0x000001aea3e41d28>
+"
+"1","<environment: namespace:igraph>
+"
